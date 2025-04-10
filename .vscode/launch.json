@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/aaskal/Desktop/override/level00",
+      "program": "/Users/aaskal/Desktop/override/level00/build/Debug/outDebug"
+    }
+  ]
+}
